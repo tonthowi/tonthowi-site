@@ -47,8 +47,8 @@ export default function Home() {
           </h2>
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
             {workCards.map((card) => (
-              <div key={card.id} className="group relative overflow-hidden">
-                <div className="w-full overflow-hidden rounded-md">
+              <div key={card.id} className="group relative overflow-hidden rounded-md shadow-md shadow-zinc-100 bg-white ring-1 ring-zinc-100 hover:shadow-lg hover:shadow-zinc-200 transition duration-300">
+                <div className="w-full overflow-hidden">
                   <Image
                     src={card.imageSrc}
                     alt={card.imageAlt}
@@ -57,7 +57,7 @@ export default function Home() {
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <div className="flex flex-col p-4 mt-4 space-y-4 overflow-hidden">
+                <div className="flex flex-col p-8 space-y-4 overflow-hidden">
                   {/* Render SVG or Image based on logoSrc type */}
                   {typeof card.logoSrc === "string" ? (
                     <Image
