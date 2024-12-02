@@ -22,7 +22,7 @@ const workCards = [
     logoAlt: "Gamestark Logo",
     title: "Redesign Account Connection Service",
     year: "2024",
-    description: "This is a remake project focuses on redesigning a B2B software that integrates third-party accounts as an authentication method for client's app.",
+    description: "A remake project redesigning a B2B software that integrates third-party accounts as client apps' authentication method.",
     caseStudyLink: "#",
   },
 ];
@@ -52,21 +52,20 @@ export default function Home() {
                   <Image
                     src={card.imageSrc}
                     alt={card.imageAlt}
-                    layout="responsive"
                     width={1000}
                     height={1000}
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <div className="flex flex-col mt-8 space-y-4 overflow-hidden">
+                <div className="flex flex-col p-4 mt-4 space-y-4 overflow-hidden">
                   {/* Render SVG or Image based on logoSrc type */}
                   {typeof card.logoSrc === "string" ? (
                     <Image
                       src={card.logoSrc}
                       alt={card.logoAlt}
-                      layout="intrinsic"
                       width={80}
                       height={80}
+                      className="w-fit h-6"
                     />
                   ) : (
                     <card.logoSrc className="h-10 w-10" aria-label={card.logoAlt} />
