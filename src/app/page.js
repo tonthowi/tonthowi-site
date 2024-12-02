@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Container } from '@/components/Container';
-import { Button } from "@/components/Button";
+import {Container} from '@/components/Container';
+import Button from "@/components/Button";
 
 const workCards = [
   {
@@ -12,7 +12,7 @@ const workCards = [
     title: "Designing Wellness Tracker Testing App",
     year: "2023",
     description: "In a super early-stage startup, I designed a mobile app to check your body wellness using a urine test strip.",
-    caseStudyLink: "#",
+    caseStudyLink: "/perfeqt",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const workCards = [
     title: "Redesign Account Connection Service",
     year: "2024",
     description: "A remake project redesigning a B2B software that integrates third-party accounts as client apps' authentication method.",
-    caseStudyLink: "#",
+    caseStudyLink: "/gamestark",
   },
 ];
 
