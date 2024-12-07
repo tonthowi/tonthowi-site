@@ -48,7 +48,7 @@ export default function Home() {
           </h2>
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
             {workCards.map((card) => (
-              <div key={card.id} className="group relative overflow-hidden rounded-md shadow-md shadow-zinc-100 bg-white ring-1 ring-zinc-100 hover:shadow-lg hover:shadow-zinc-200 transition duration-300">
+              <div key={card.id} className="group relative overflow-hidden rounded-md shadow-sm shadow-zinc-100 bg-white ring-1 ring-zinc-200 hover:shadow-md hover:shadow-zinc-200 transition duration-300">
                 <div className="w-full overflow-hidden">
                   <Image
                     src={card.imageSrc}

@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import { notFound } from 'next/navigation';
 import MDXContent from '@/components/MDXContent';
-import { Container } from '@/components/Container';
+import { WorkLayout } from '@/components/WorkLayout';
 
 export async function generateStaticParams() {
   // Read all files in the "works" and "articles" directories
@@ -24,22 +24,17 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
   try {
-    // Await `params` if it's a promise (should not usually be the case)
     const resolvedParams = await params;
-
-    // Safely destructure `slug` from `params`
     const { slug } = resolvedParams;
 
     if (!slug) {
       notFound();
     }
 
-    // Define file paths for "works" and "articles"
     const worksPath = path.join(process.cwd(), 'src/contents/works', `${slug}.mdx`);
     const articlesPath = path.join(process.cwd(), 'src/contents/articles', `${slug}.mdx`);
     let filePath;
 
-    // Check if the file exists in either directory
     if (fs.existsSync(worksPath)) {
       filePath = worksPath;
     } else if (fs.existsSync(articlesPath)) {
@@ -48,11 +43,9 @@ export default async function Page({ params }) {
       notFound();
     }
 
-    // Read file content and parse front matter
     const markdownWithMeta = fs.readFileSync(filePath, 'utf-8');
     const { data: frontMatter, content } = matter(markdownWithMeta);
 
-    // Serialize MDX content
     const mdxSource = await serialize(content, {
       parseFrontmatter: true,
       mdxOptions: {
@@ -60,15 +53,15 @@ export default async function Page({ params }) {
       },
     });
 
-    // Render the page
     return (
-      <Container>
-        <article className="prose dark:prose-invert mx-auto mt-16">
-          <h1>{frontMatter.title}</h1>
-          <p className="text-zinc-400">{frontMatter.year}</p>
-          <MDXContent source={mdxSource} />
-        </article>
-      </Container>
+      <WorkLayout
+        title={frontMatter.title}
+        description={frontMatter.description}
+        role={[frontMatter.role]}
+        year={[frontMatter.year]}
+      >
+        <MDXContent source={mdxSource} />
+      </WorkLayout>
     );
   } catch (error) {
     console.error('Error loading content:', error);
