@@ -58,6 +58,8 @@ export default async function Page({ params }) {
         title={frontMatter.title}
         description={frontMatter.description}
         role={[frontMatter.role]}
+        deliverables={[frontMatter.deliverables]}
+        team={[frontMatter.team]}
         year={[frontMatter.year]}
       >
         <MDXContent source={mdxSource} />

@@ -1,8 +1,99 @@
 ---
-title: "Redesign Account Connection Service"
-year: "2024"
+title: "Account Connection Service UX redesign"
+role: "UX/UI Designer"
+team: "A small team of developers"
+year: "2023"
+deliverables: "UI Redesign, Design System, Prototyping"
+image: "/images/gamestark-thumb.png"
+logo: "/images/gamestark-logo.svg"
+description: "Redesign a B2B service that integrates third-party accounts as an authentication method for client's app."
 ---
 
-# Redesign Account Connection Service
+## Overview
+Gamestark is a backend-as-a-service platform that helps game developers build and scale their games. One of the service is Account Connection which provides a range of authentication methods, enabling flexibility when authenticating players and admins.
 
-This is a remake project focuses on redesigning a B2B software that integrates third-party accounts as an authentication method for client's app.
+## Drawbacks of The Previous UX
+<img 
+  src="/images/legacy social connection UX.png"
+  alt="Gamestark legacy social connection UX"
+  style={{ width: '100%', maxHeight: '600px' }} 
+/>
+The previous service has simple and straightforward UX but lack of informations and instructions, has limited platform options, and there’s no section in the UI designed to provide a complete overview and insights of all relevant context and accessible to users.
+
+- 🙁 Limited platforms available and no instructions to set up the account connection.
+- 🙁 The UI doesn’t have a section that gives a complete overview and relevant context, users can end up feeling confused about what to do next.
+
+## Opportunity
+From the product perspective, we see this as a chance to put our best foot forward by redesigning the product service, address all paint points from the user experience.
+
+## Account Connection 2.0 Redesign
+We’ve come up with fresh interaction and UI of Account Connection service. This would help our customers integrating third-party authentication and identity provider into their app.
+
+### Setup a new connection
+Set up a connection with pre-configured platforms that users can choose to quickly set up, saving them time and effort.
+
+If users don’t have a connected account yet, this screen will appear, help them save time and avoid the hassle of searching through each platform.
+
+<img 
+  src="/images/gamestark-empty-state.png"
+  alt="The initial state of the UI"
+  style={{ width: '100%', maxHeight: '600px' }} 
+/>
+
+On the other hand, if users already activated some of the platforms, the list will appear in a comprehensive way.
+
+<img 
+  src="/images/gamestark-account-connection-list.png"
+  alt="The list of plaftoms activated"
+  style={{ width: '100%', maxHeight: '600px' }} 
+/>
+
+### Select the platform
+<video
+  src="/images/gamestark-select-platform.mp4" 
+  autoPlay 
+  loop 
+  muted 
+  playsInline 
+  style={{ width: '100%', maxHeight: '600px' }}
+>
+  Your browser does not support the video tag.
+</video>
+I designed a new screen that puts together all available platforms, organized by type, with a short description for each to provide helpful context.
+
+### Configuration Fields
+Once users select a platform, they can input the informations needed to set up a platform as their app’s account connection and identity provider.
+<video
+  src="/images/gamestark-view-in-app-documentation.mp4" 
+  autoPlay 
+  loop 
+  muted 
+  playsInline 
+  style={{ width: '100%', maxHeight: '600px' }}
+>
+  Your browser does not support the video tag.
+</video>
+One key aspect I emphasized during the design phase is making comprehensive documentation in a form of step-by-step instructions easily accessible ensuring that users don’t have to leave the process to search for help, minimizing interruptions and reducing frustration.
+
+### Account Setup successful
+<video
+  src="/images/gamestark-activate-connection.mp4" 
+  autoPlay 
+  loop 
+  muted 
+  playsInline 
+  style={{ width: '100%', maxHeight: '600px' }}
+>
+  Your browser does not support the video tag.
+</video>
+Once the account connection is successfully set up, visitors on the client’s webpage can sign in and authorize their account using the platform—in this case, Twitch, and make the use of it as an identity provider.
+<video
+  src="/images/gamestark-account-successfully-set-up.mp4" 
+  autoPlay 
+  loop 
+  muted 
+  playsInline 
+  style={{ width: '100%', maxHeight: '600px' }}
+>
+  Your browser does not support the video tag.
+</video>
