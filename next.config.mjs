@@ -12,6 +12,16 @@ const nextConfig = {
   },
   webpack(config) {
     config.module.rules.push({
+      test: /\.js$/,
+      include: /node_modules\/(undici|cheerio)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['next/babel'],
+        },
+      },
+    });
+    config.module.rules.push({
       test: /\.svg$/, // Match SVG files
       use: ['@svgr/webpack'], // Use SVGR loader to import SVGs as React components
     });
