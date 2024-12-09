@@ -10,11 +10,11 @@ export const metadata = {
   },
   description:
     'I’m Towi, a software designer(UI/UX) based in Bali. I developed this website while learning NextJS. It was daunting.',
-  // alternates: {
-  //   types: {
-  //     'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-  //   },
-  // },
+  alternates: {
+    types: {
+      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
+    },
+  },
 }
 
 export default function RootLayout({ children }) {
