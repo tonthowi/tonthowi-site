@@ -35,11 +35,11 @@ export async function GET(req) {
     .map((key) => key.slice(2).replace(/\/page\.mdx$/, ''))
 
   for (let id of workIds) {
-    let url = String(new URL(`/contents/works/${id}`, req.url))
+    let url = String(new URL(`../../contents/works/${id}`, req.url))
     let html = await (await fetch(url)).text()
     let $ = cheerio.load(html)
 
-    let publicUrl = `${siteUrl}/contents/works/${id}`
+    let publicUrl = `${siteUrl}../../contents/works/${id}`
     let work = $('work').first()
     let title = work.find('h1').first().text()
     let content = work.find('[data-mdx-content]').first().html()
