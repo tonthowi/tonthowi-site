@@ -60,7 +60,7 @@ export default async function Page({ params }) {
         role={[frontMatter.role]}
         deliverables={[frontMatter.deliverables]}
         team={[frontMatter.team]}
-        year={[frontMatter.year]}
+        logo={[frontMatter.logo]}
       >
         <MDXContent source={mdxSource} />
       </WorkLayout>

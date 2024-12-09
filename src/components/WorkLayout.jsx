@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import Button from './Button';
 
 function ArrowLeftIcon(props) {
@@ -16,7 +17,7 @@ function ArrowLeftIcon(props) {
   );
 }
 
-export function WorkLayout({ title, role, team, year, description, deliverables, children }) {
+export function WorkLayout({ title, role, team, logo, description, deliverables, children }) {
   const router = useRouter();
 
   return (
@@ -33,7 +34,7 @@ export function WorkLayout({ title, role, team, year, description, deliverables,
             >
               ← Back to Homepage
             </button>
-            <div className="pt-2">
+            <div>
               <h1 className="text-4xl lg:text-5xl font-extrabold text-zinc-900 dark:text-white">
                 {title}
               </h1>
@@ -66,11 +67,17 @@ export function WorkLayout({ title, role, team, year, description, deliverables,
                   </div>
                 </div>
               )}
-              {year && (
+               {logo && (
                 <div className="py-3 text-sm text-zinc-600 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-700">
                   <div className="flex flex-row">
-                    <p className="w-full font-semibold">Year</p>
-                    <p className="w-full text-right">{year}</p>
+                    <p className="w-full font-semibold">Client</p>
+                    <Image
+                      src={typeof logo === 'string' ? logo : logo[0]}
+                      width={80}
+                      height={80}
+                      alt="Client Logo"
+                      style={{ width: 'auto', height: '20px' }}
+                    />
                   </div>
                 </div>
               )}

@@ -15,6 +15,8 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import avatarImage from '../../public/images/self-portrait.png'
 
+import { navItems } from './navItems';
+
 function CloseIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -44,22 +46,14 @@ function ChevronDownIcon(props) {
   )
 }
 
-const navItems = [
-  { href: '/about', label: 'About' },
-  { href: 'https://read.cv/tonthowi', label: 'Read.CV↗', target: '_blank' },
-  { href: 'https://www.linkedin.com/in/tonthowi-al-ahyar/', label: 'LinkedIn↗', target: '_blank' },
-  { href: 'https://github.com/tonthowi', label: 'GitHub↗', target: '_blank' },
-];
-
-
-function MobileNavItem({ href, children, target }) {
+function MobileNavItem({ href, label, target }) {
   return (
     <li>
       <PopoverButton as={Link} href={href} target={target} className="block py-2">
-        {children}
+        {label}
       </PopoverButton>
     </li>
-  )
+  );
 }
 
 function MobileNavigation(props) {
@@ -69,36 +63,35 @@ function MobileNavigation(props) {
         Menu
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
       </PopoverButton>
-      <PopoverBackdrop
-        transition
-        className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm duration-150 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in dark:bg-black/80"
-      />
+      <PopoverBackdrop className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm duration-150 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in dark:bg-black/80" />
       <PopoverPanel
         focus
-        transition
         className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 duration-150 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in dark:bg-zinc-900 dark:ring-zinc-800"
       >
         <div className="flex flex-row-reverse items-center justify-between">
           <PopoverButton aria-label="Close menu" className="-m-1 p-1">
             <CloseIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
           </PopoverButton>
-
         </div>
         <nav className="mt-6">
           <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-            <MobileNavItem href="/about">About</MobileNavItem>
-            <MobileNavItem href="https://read.cv/tonthowi" target="_blank">Read.CV↗</MobileNavItem>
-            <MobileNavItem href="https://www.linkedin.com/in/tonthowi-al-ahyar/" target="_blank">LinkedIn↗</MobileNavItem>
-            <MobileNavItem href="https://github.com/tonthowi" target="_blank">GitHub↗</MobileNavItem>
+            {navItems.map((item, index) => (
+              <MobileNavItem
+                key={index}
+                href={item.href}
+                label={item.label}
+                target={item.target}
+              />
+            ))}
           </ul>
         </nav>
       </PopoverPanel>
     </Popover>
-  )
+  );
 }
 
-function NavItem({ href, children, target }) {
-  let isActive = usePathname() === href
+function NavItem({ href, label, target }) {
+  const isActive = usePathname() === href;
 
   return (
     <li>
@@ -112,23 +105,27 @@ function NavItem({ href, children, target }) {
             : 'hover:text-zinc-400 dark:hover:text-teal-400',
         )}
       >
-        {children}
+        {label}
       </Link>
     </li>
-  )
+  );
 }
 
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
       <ul className="flex rounded-lg bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-800/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/about">About</NavItem>
-        <NavItem href="https://read.cv/tonthowi" target="_blank">Read.CV↗</NavItem>
-        <NavItem href="https://www.linkedin.com/in/tonthowi-al-ahyar/" target="_blank">LinkedIn↗</NavItem>
-        <NavItem href="https://github.com/tonthowi" target="_blank">GitHub↗</NavItem>
+        {navItems.map((item, index) => (
+          <NavItem
+            key={index}
+            href={item.href}
+            label={item.label}
+            target={item.target}
+          />
+        ))}
       </ul>
     </nav>
-  )
+  );
 }
 
 function clamp(number, a, b) {
