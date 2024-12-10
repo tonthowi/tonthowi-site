@@ -149,10 +149,10 @@ export default function About() {
         <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
-              src="/images/self-portrait.png"
-              width={200}
-              height={200}
-              alt=""
+              src="/images/about-photo.png"
+              width={550}
+              height={550}
+              alt="About Tonthowi Al Ahyar"
               className="aspect-square rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />
           </div>
