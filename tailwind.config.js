@@ -46,7 +46,7 @@ module.exports = {
               marginTop: "0.5rem",
               marginBottom: "0.5rem",
               lineHeight: "1.6",
-              color: theme("colors.gray.700"),
+              color: theme("colors.foreground"),
             },
             code: {
               color: theme("colors.pink.500"),
@@ -64,16 +64,18 @@ module.exports = {
             ul: {
               listStyleType: "disc",
               paddingLeft: "2rem",
+              color: theme("colors.foreground"),
             },
             ol: {
               listStyleType: "decimal",
               paddingLeft: "2rem",
+              color: theme("colors.foreground"),
             },
             li: {
               marginTop: "0.5rem",
               marginBottom: "0.5rem",
               lineHeight: "1.6",
-              color: theme("colors.gray.600"),
+              color: theme("colors.foreground"),
             },
             img: {
               marginTop: "1rem",

@@ -41,7 +41,7 @@ export default async function Home() {
             {workCards.map((card) => (
               <div
                 key={card.id}
-                className="group relative overflow-hidden rounded-md shadow-sm shadow-zinc-100 bg-white ring-1 ring-zinc-100 hover:shadow-md hover:shadow-zinc-200 transition duration-300"
+                className="group relative overflow-hidden rounded-md shadow-sm shadow-zinc-100 dark:shadow-none bg-white dark:bg-zinc-900 ring-1 ring-zinc-100 dark:ring-zinc-950 hover:shadow-md hover:dark:shadow-none hover:shadow-zinc-200 transition duration-300"
               >
                 <div className="w-full overflow-hidden">
                   <Image
