@@ -4,24 +4,25 @@ import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { ImageWithAlt, VideoWithAlt } from '../contents/media'; // Correct path to your media file
+
 const components = {
-  // Custom handling for `img` to work with `next/image`
   img: ({ src, alt, title, width, height }) => {
     return (
-      <>
-        <Image className="relative max-w-full overflow-hidden rounded-lg"
-          src={src}
-          alt={alt || ''}
-          title={title}
-          width={width || 800} // Default width
-          height={height || 600} // Default height
-          priority // Ensures critical images are loaded eagerly
-        />
-      </>
+      <Image
+        className="relative max-w-full overflow-hidden rounded-lg"
+        src={src}
+        alt={alt || ''}
+        title={title}
+        width={width || 800}
+        height={height || 600}
+        priority
+      />
     );
   },
-  // Handle links with `next/link`
   a: (props) => <Link {...props} />,
+  ImageWithAlt,
+  VideoWithAlt,
 };
 
 export default function MDXContent({ source }) {

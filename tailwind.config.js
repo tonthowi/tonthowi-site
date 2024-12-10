@@ -12,6 +12,20 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        silka: ['silkaregular', 'Arial', 'Helvetica', 'sans-serif'],
+        silkaItalic: ['silkaregular_italic', 'Arial', 'Helvetica', 'sans-serif'],
+        silkabold: ['silkabold', 'Arial', 'Helvetica', 'sans-serif'],
+      },
+      letterSpacing: {
+        tightest: '-.075em',
+        tighter: '-.05em',
+        tight: '-.025em',
+        normal: '0',
+        wide: '.025em',
+        wider: '.05em',
+        widest: '.1em',
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -23,24 +37,6 @@ module.exports = {
                 textDecoration: "underline",
               },
             },
-            h1: {
-              marginTop: "1.25rem",
-              marginBottom: "0.5rem",
-              fontWeight: "700",
-              color: theme("colors.foreground"),
-            },
-            h2: {
-              marginTop: "1.75rem",
-              marginBottom: "1rem",
-              fontWeight: "600",
-              color: theme("colors.foreground"),
-            },
-            h3: {
-              marginTop: "1rem",
-              marginBottom: "0.5rem",
-              fontWeight: "600",
-              color: theme("colors.foreground"),
-            },
             blockquote: {
               borderLeftColor: theme("colors.blue.500"),
               color: theme("colors.gray.700"),
@@ -50,7 +46,7 @@ module.exports = {
               marginTop: "0.5rem",
               marginBottom: "0.5rem",
               lineHeight: "1.6",
-              color: theme("colors.gray.600"),
+              color: theme("colors.gray.700"),
             },
             code: {
               color: theme("colors.pink.500"),
@@ -94,5 +90,37 @@ module.exports = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    function ({ addBase, theme }) {
+      addBase({
+        h1: {
+          marginTop: "1.25rem",
+          marginBottom: "0.5rem",
+          fontFamily: theme("fontFamily.silkabold"),
+          color: theme("colors.foreground"),
+        },
+        h2: {
+          marginTop: "1.75rem",
+          marginBottom: "1rem",
+          fontFamily: theme("fontFamily.silkabold"),
+          color: theme("colors.foreground"),
+        },
+        h3: {
+          marginTop: "1rem",
+          marginBottom: "0.5rem",
+          fontFamily: theme("fontFamily.silkabold"),
+          color: theme("colors.foreground"),
+        },
+        h4: {
+          marginTop: "1rem",
+          marginBottom: "0.5rem",
+          fontFamily: theme("fontFamily.silkabold"),
+          color: theme("colors.foreground"),
+          textTransform: "uppercase",
+          letterSpacing: theme("letterSpacing.widest"),
+        },
+      });
+    },
+  ],
 };

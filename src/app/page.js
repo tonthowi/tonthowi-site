@@ -23,8 +23,8 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-7">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl tracking-tight text-zinc-800 sm:text-6xl dark:text-zinc-100">
             Software designer specialising in improving design maturity.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
@@ -34,10 +34,10 @@ export default async function Home() {
       </Container>
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto">
-          <h2 className="flex flex-col lg:flex-row mb-6 text-xl font-medium tracking-tight gap-0 lg:gap-2 text-zinc-600">
+          <h4 className="flex flex-col lg:flex-row mb-6 gap-0 lg:gap-2">
             Featured Works
-          </h2>
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
+          </h4>
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-1 lg:grid-cols-2 xl:gap-x-8">
             {workCards.map((card) => (
               <div
                 key={card.id}
@@ -53,15 +53,8 @@ export default async function Home() {
                   />
                 </div>
                 <div className="flex flex-col p-8 space-y-4 overflow-hidden">
-                  <Image
-                    src={card.logo || '/default-logo.svg'} // Fallback for missing logos
-                    alt={card.title + ' Logo'}
-                    width={80}
-                    height={80}
-                    className="w-fit h-6"
-                  />
                   <div className="space-y-1">
-                    <h3 className="text-xl font-semibold tracking-tight">
+                    <h3 className="text-2xl">
                       {card.title}
                     </h3>
                     <p className="text-xs text-zinc-400">{card.year}</p>

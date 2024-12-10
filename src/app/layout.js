@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+    <html lang="en" className="h-full antialiased font-silka" suppressHydrationWarning>
       <body className="flex h-full bg-white dark:bg-black">
           <div className="flex w-full">
             <Layout>{children}</Layout>

@@ -53,9 +53,9 @@ function SocialLinks() {
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+      <h4 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <span>Connect with Me</span>
-      </h2>
+      </h4>
       <ul role="list" className="mt-6 space-y-5">
         {socialLinks.map((link, index) => (
           <SocialLinkItem key={index} link={link} />
@@ -130,9 +130,9 @@ function Resume() {
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+      <h4 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <span>Work Experience</span>
-      </h2>
+      </h4>
       <ol className="mt-6 space-y-4">
         {resume.map((role, index) => (
           <Role key={index} role={role} />
@@ -159,9 +159,9 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Hi, I’m Towi 👋 
+            Hi, I&apos;m Towi 
           </h1>
-          <h3 className="mt-6 text-xl font-semibold tracking-tight text-zinc-400 sm:text-2xl dark:text-zinc-100">
+          <h3 className="mt-6 tracking-tight text-zinc-400 sm:text-2xl dark:text-zinc-100">
           A designer based in Bali 🏖️. I&apos;m available for full-time roles, freelance projects and design advicing.
           </h3>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
