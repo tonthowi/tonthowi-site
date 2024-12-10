@@ -4,14 +4,13 @@ import Image from 'next/image';
 function ImageWithAlt({ src, alt, title, style, width, height }) {
   const altText = alt || (src ? src.split('/').pop().replace(/\.[^/.]+$/, '').replace(/-/g, ' ') : 'image');
   return (
-    <Image
+    <img
       src={src}
       alt={altText}
       title={title}
       style={{ width: '100%', maxHeight: '600px', ...style }} // Default styling
       width={width || 800} // Default width
       height={height || 600} // Default height
-      priority // Ensures critical images are loaded eagerly
     />
   );
 }
