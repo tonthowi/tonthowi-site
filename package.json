@@ -21,6 +21,7 @@
     "babel-preset-next": "^1.4.0",
     "cheerio": "^1.0.0",
     "feed": "^4.2.2",
+    "framer-motion": "^11.13.3",
     "gray-matter": "^4.0.3",
     "jsdom": "^25.0.1",
     "next": "^13.5.0",

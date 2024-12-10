@@ -162,17 +162,17 @@ export default function About() {
             Hi, I’m Towi 👋 
           </h1>
           <h3 className="mt-6 text-xl font-semibold tracking-tight text-zinc-400 sm:text-2xl dark:text-zinc-100">
-          A designer based in Bali 🏖️. I'm available for full-time roles, freelance projects and design advicing.
+          A designer based in Bali 🏖️. I&apos;m available for full-time roles, freelance projects and design advicing.
           </h3>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               I started my professional career as a graphic designer, stepping-up as an Art Director in a creative agency.
             </p>
             <p>
-              I was interested in designing and developing websites when I was working on my first company's website in 2013. I hadn't any idea what and how to build a website and deployed it live at that time. Google and Stack Overflow was my friend up until now, then we have ChatGPT join the group.
+              I was interested in designing and developing websites when I was working on my first company&apos;s website in 2013. I hadn&apos;t any idea what and how to build a website and deployed it live at that time. Google and Stack Overflow was my friend up until now, then we have ChatGPT join the group.
             </p>
             <p>
-              Today, I design digital products and websites for startups, brands, and entrepreneurs with cool projects. Also, I'm working for a gaming backend service as a product designer and involved in helping customers launch their games.
+              Today, I design digital products and websites for startups, brands, and entrepreneurs with cool projects. Also, I&apos;m working for a gaming backend service as a product designer and involved in helping customers launch their games.
             </p>
           </div>
         </div>
