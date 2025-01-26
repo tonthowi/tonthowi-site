@@ -3,172 +3,126 @@ module.exports = {
   darkMode: 'class',
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./public/**/*.html",
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // Light mode - Enhanced contrast
+        white: '#FFFFFF',
+        'zinc-50': '#FAFAFA',
+        'zinc-100': '#F4F4F5',
+        'zinc-200': '#E4E4E7',
+        'zinc-300': '#D4D4D8',
+        'zinc-400': '#8F8F99',
+        'zinc-500': '#6B6B74',
+        'zinc-600': '#484851',
+        'zinc-700': '#3A3A41',
+        'zinc-800': '#27272A',
+        'zinc-900': '#18181B',
+        'zinc-950': '#09090B',
+        black: '#000000',
       },
       fontFamily: {
-        silka: ['silkaregular', 'Arial', 'Helvetica', 'sans-serif'],
-        silkaItalic: ['silkaregular_italic', 'Arial', 'Helvetica', 'sans-serif'],
-        silkabold: ['silkabold', 'Arial', 'Helvetica', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+      },
+      fontSize: {
+        xs: ['0.75rem', { lineHeight: '1rem' }],
+        sm: ['0.875rem', { lineHeight: '1.25rem' }],
+        base: ['1rem', { lineHeight: '1.5rem' }],
+        lg: ['1.125rem', { lineHeight: '1.75rem' }],
+        xl: ['1.25rem', { lineHeight: '1.75rem' }],
+        '2xl': ['1.5rem', { lineHeight: '2rem' }],
+        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+        '5xl': ['3rem', { lineHeight: '1.16' }],
+        '6xl': ['3.75rem', { lineHeight: '1.12' }],
+      },
+      spacing: {
+        0: '0',
+        px: '1px',
+        0.5: '0.125rem',
+        1: '0.25rem',
+        1.5: '0.375rem',
+        2: '0.5rem',
+        2.5: '0.625rem',
+        3: '0.75rem',
+        3.5: '0.875rem',
+        4: '1rem',
+        5: '1.25rem',
+        6: '1.5rem',
+        7: '1.75rem',
+        8: '2rem',
+        9: '2.25rem',
+        10: '2.5rem',
+        11: '2.75rem',
+        12: '3rem',
+        14: '3.5rem',
+        16: '4rem',
+        20: '5rem',
+        24: '6rem',
+        28: '7rem',
+        32: '8rem',
+        36: '9rem',
+        40: '10rem',
+        44: '11rem',
+        48: '12rem',
+        52: '13rem',
+        56: '14rem',
+        60: '15rem',
+        64: '16rem',
+        72: '18rem',
+        80: '20rem',
+        96: '24rem',
       },
       letterSpacing: {
-        tightest: '-.075em',
-        tighter: '-.05em',
-        tight: '-.025em',
-        normal: '0',
-        wide: '.025em',
-        wider: '.05em',
-        widest: '.1em',
+        tighter: '-0.02em',
+        tight: '-0.01em',
+        normal: '0em',
+        wide: '0.01em',
+        wider: '0.02em',
+        widest: '0.05em',
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme("colors.zinc.600"),
-            'h1, h2, h3, h4': {
-              color: theme("colors.zinc.900"),
-              fontWeight: '600',
-            },
-            a: {
-              color: theme("colors.teal.500"),
-              textDecoration: "none",
-              "&:hover": {
-                textDecoration: "underline",
-              },
-            },
-            blockquote: {
-              borderLeftColor: theme("colors.zinc.200"),
-              color: theme("colors.zinc.600"),
-            },
-            hr: {
-              borderColor: theme("colors.zinc.200"),
-            },
-            'ul > li::marker': {
-              color: theme("colors.zinc.400"),
-            },
-            'ol > li::marker': {
-              color: theme("colors.zinc.400"),
-            },
-            code: {
-              color: theme("colors.zinc.700"),
-              backgroundColor: theme("colors.zinc.100"),
-            },
-            pre: {
-              backgroundColor: theme("colors.zinc.800"),
-              color: theme("colors.zinc.200"),
-            },
-            thead: {
-              color: theme("colors.zinc.900"),
-            },
-            'tbody tr': {
-              borderBottomColor: theme("colors.zinc.200"),
-            },
+            '--tw-prose-body': theme('colors.zinc.600'),
+            '--tw-prose-headings': theme('colors.zinc.900'),
+            '--tw-prose-links': theme('colors.zinc.900'),
+            '--tw-prose-bold': theme('colors.zinc.900'),
+            '--tw-prose-counters': theme('colors.zinc.700'),
+            '--tw-prose-bullets': theme('colors.zinc.700'),
+            '--tw-prose-quotes': theme('colors.zinc.900'),
+            '--tw-prose-code': theme('colors.zinc.900'),
+            '--tw-prose-hr': theme('colors.zinc.200'),
+            '--tw-prose-th-borders': theme('colors.zinc.300'),
+            '--tw-prose-td-borders': theme('colors.zinc.200'),
+
+            // Dark mode
+            '--tw-prose-invert-body': theme('colors.zinc.300'),
+            '--tw-prose-invert-headings': theme('colors.zinc.100'),
+            '--tw-prose-invert-links': theme('colors.zinc.100'),
+            '--tw-prose-invert-bold': theme('colors.zinc.100'),
+            '--tw-prose-invert-counters': theme('colors.zinc.300'),
+            '--tw-prose-invert-bullets': theme('colors.zinc.300'),
+            '--tw-prose-invert-quotes': theme('colors.zinc.100'),
+            '--tw-prose-invert-code': theme('colors.zinc.100'),
+            '--tw-prose-invert-hr': theme('colors.zinc.700'),
+            '--tw-prose-invert-th-borders': theme('colors.zinc.600'),
+            '--tw-prose-invert-td-borders': theme('colors.zinc.700'),
           },
         },
         invert: {
           css: {
-            color: theme("colors.zinc.400"),
-            'h1, h2, h3, h4': {
-              color: theme("colors.zinc.200"),
-            },
-            a: {
-              color: theme("colors.teal.400"),
-            },
-            blockquote: {
-              borderLeftColor: theme("colors.zinc.700"),
-              color: theme("colors.zinc.400"),
-            },
-            hr: {
-              borderColor: theme("colors.zinc.700"),
-            },
-            'ul > li::marker': {
-              color: theme("colors.zinc.600"),
-            },
-            'ol > li::marker': {
-              color: theme("colors.zinc.600"),
-            },
-            code: {
-              color: theme("colors.zinc.200"),
-              backgroundColor: theme("colors.zinc.800"),
-            },
-            pre: {
-              backgroundColor: theme("colors.zinc.900"),
-              color: theme("colors.zinc.200"),
-            },
-            thead: {
-              color: theme("colors.zinc.200"),
-            },
-            'tbody tr': {
-              borderBottomColor: theme("colors.zinc.700"),
-            },
+            '--tw-prose-body': theme('colors.zinc.400'),
+            '--tw-prose-headings': theme('colors.zinc.200'),
+            '--tw-prose-links': theme('colors.zinc.200'),
           },
         },
       }),
     },
   },
   plugins: [
-    require("@tailwindcss/typography"),
-    function ({ addBase, theme }) {
-      addBase({
-        'body': {
-          backgroundColor: theme('colors.white'),
-          color: theme('colors.zinc.600'),
-        },
-        'body.dark': {
-          backgroundColor: theme('colors.black'),
-          color: theme('colors.zinc.400'),
-        },
-        'h1': {
-          marginTop: "1.25rem",
-          marginBottom: "0.5rem",
-          fontFamily: theme("fontFamily.silkabold"),
-          color: theme("colors.zinc.900"),
-          '.dark &': {
-            color: theme("colors.zinc.100"),
-          },
-        },
-        'h2': {
-          marginTop: "1.75rem",
-          marginBottom: "1rem",
-          fontFamily: theme("fontFamily.silkabold"),
-          color: theme("colors.zinc.900"),
-          '.dark &': {
-            color: theme("colors.zinc.100"),
-          },
-        },
-        'h3': {
-          marginTop: "1rem",
-          marginBottom: "0.5rem",
-          fontFamily: theme("fontFamily.silkabold"),
-          color: theme("colors.zinc.900"),
-          '.dark &': {
-            color: theme("colors.zinc.100"),
-          },
-        },
-        'h4': {
-          marginTop: "1rem",
-          marginBottom: "0.5rem",
-          fontFamily: theme("fontFamily.silkabold"),
-          color: theme("colors.zinc.900"),
-          '.dark &': {
-            color: theme("colors.zinc.100"),
-          },
-          textTransform: "uppercase",
-          letterSpacing: theme("letterSpacing.widest"),
-        },
-        'p': {
-          color: theme("colors.zinc.600"),
-          '.dark &': {
-            color: theme("colors.zinc.400"),
-          },
-        },
-      });
-    },
+    require('@tailwindcss/typography'),
   ],
 };

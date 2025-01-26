@@ -3,9 +3,9 @@ import clsx from 'clsx'
 
 const variantStyles = {
   primary:
-    'bg-zinc-800 font-silkabold uppercase tracking-widest text-zinc-100 hover:bg-zinc-700 active:bg-zinc-800 active:text-zinc-100/70 dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-700 dark:active:text-zinc-100/70',
+    'bg-zinc-900 font-semibold uppercase tracking-widest text-zinc-100 hover:bg-zinc-800 active:bg-zinc-900 active:text-zinc-100/90 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200 dark:active:bg-zinc-100 dark:active:text-zinc-900/90',
   secondary:
-    'bg-zinc-50 font-silkabold uppercase tracking-widest text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70',
+    'bg-zinc-100 font-semibold uppercase tracking-widest text-zinc-900 hover:bg-zinc-200 active:bg-zinc-100 active:text-zinc-900/90 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 dark:hover:text-zinc-100 dark:active:bg-zinc-800 dark:active:text-zinc-100/90',
 }
 
 export default function Button({ variant = 'primary', className, ...props }) {

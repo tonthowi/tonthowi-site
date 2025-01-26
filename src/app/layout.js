@@ -4,7 +4,11 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 
 import '@/styles/tailwind.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 export const metadata = {
   title: {
@@ -22,8 +26,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body className={`${inter.className} bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-100 min-h-screen`}>
+    <html lang="en" className={`h-full antialiased ${inter.variable}`} suppressHydrationWarning>
+      <body className="bg-white dark:bg-zinc-950 text-zinc-600 dark:text-zinc-300 min-h-screen">
         <ThemeProvider>
           <div className="flex w-full">
             <Layout>{children}</Layout>
