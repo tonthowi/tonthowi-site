@@ -16,6 +16,7 @@ import { Container } from '@/components/Container'
 import avatarImage from '../../public/images/self-portrait.png'
 
 import { navItems } from './navItems';
+import { ThemeToggle } from './ThemeToggle'
 
 function CloseIcon(props) {
   return (
@@ -114,7 +115,7 @@ function NavItem({ href, label, target }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-lg bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-800/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <ul className="flex rounded-lg bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         {navItems.map((item, index) => (
           <NavItem
             key={index}
@@ -347,6 +348,7 @@ export function Header() {
               </div>
               <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">
+                  <ThemeToggle />
                 </div>
               </div>
             </div>

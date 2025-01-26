@@ -21,7 +21,7 @@ export function WorkLayout({ title, role, team, logo, description, deliverables,
   const router = useRouter();
 
   return (
-    <div className="mx-auto max-w-7xl mt-16 lg:mt-24 px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl mt-16 lg:mt-24 px-4 sm:px-6 lg:px-8 xl:relative">
       <div className="flex flex-col lg:flex-row gap-12">
         {/* Sidebar */}
         <div className="sm:w-full lg:w-1/3">
@@ -87,7 +87,9 @@ export function WorkLayout({ title, role, team, logo, description, deliverables,
 
         {/* Main Content */}
         <main className="flex-1">
-          <article className="prose dark:prose-invert max-w-none">{children}</article>
+          <article className="prose dark:prose-invert prose-zinc max-w-none">
+            {children}
+          </article>
         </main>
       </div>
     </div>

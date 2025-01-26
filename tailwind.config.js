@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -29,63 +30,82 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme("colors.foreground"),
+            color: theme("colors.zinc.600"),
+            'h1, h2, h3, h4': {
+              color: theme("colors.zinc.900"),
+              fontWeight: '600',
+            },
             a: {
-              color: theme("colors.blue.500"),
+              color: theme("colors.teal.500"),
               textDecoration: "none",
               "&:hover": {
                 textDecoration: "underline",
               },
             },
             blockquote: {
-              borderLeftColor: theme("colors.blue.500"),
-              color: theme("colors.gray.700"),
-              fontStyle: "italic",
+              borderLeftColor: theme("colors.zinc.200"),
+              color: theme("colors.zinc.600"),
             },
-            p: {
-              marginTop: "0.5rem",
-              marginBottom: "0.5rem",
-              lineHeight: "1.6",
-              color: theme("colors.foreground"),
+            hr: {
+              borderColor: theme("colors.zinc.200"),
+            },
+            'ul > li::marker': {
+              color: theme("colors.zinc.400"),
+            },
+            'ol > li::marker': {
+              color: theme("colors.zinc.400"),
             },
             code: {
-              color: theme("colors.pink.500"),
-              backgroundColor: theme("colors.gray.100"),
-              padding: "0.2em 0.4em",
-              borderRadius: "0.2em",
+              color: theme("colors.zinc.700"),
+              backgroundColor: theme("colors.zinc.100"),
             },
             pre: {
-              backgroundColor: theme("colors.gray.800"),
-              color: theme("colors.white"),
-              padding: "1rem",
-              borderRadius: theme("borderRadius.lg"),
-              overflowX: "auto",
+              backgroundColor: theme("colors.zinc.800"),
+              color: theme("colors.zinc.200"),
             },
-            ul: {
-              listStyleType: "disc",
-              paddingLeft: "2rem",
-              color: theme("colors.foreground"),
+            thead: {
+              color: theme("colors.zinc.900"),
             },
-            ol: {
-              listStyleType: "decimal",
-              paddingLeft: "2rem",
-              color: theme("colors.foreground"),
+            'tbody tr': {
+              borderBottomColor: theme("colors.zinc.200"),
             },
-            li: {
-              marginTop: "0.5rem",
-              marginBottom: "0.5rem",
-              lineHeight: "1.6",
-              color: theme("colors.foreground"),
+          },
+        },
+        invert: {
+          css: {
+            color: theme("colors.zinc.400"),
+            'h1, h2, h3, h4': {
+              color: theme("colors.zinc.200"),
             },
-            img: {
-              marginTop: "1rem",
-              marginBottom: "1rem",
-              borderRadius: theme("borderRadius.lg"),
+            a: {
+              color: theme("colors.teal.400"),
             },
-            video: {
-              marginTop: "1rem",
-              marginBottom: "1rem",
-              borderRadius: theme("borderRadius.lg"),
+            blockquote: {
+              borderLeftColor: theme("colors.zinc.700"),
+              color: theme("colors.zinc.400"),
+            },
+            hr: {
+              borderColor: theme("colors.zinc.700"),
+            },
+            'ul > li::marker': {
+              color: theme("colors.zinc.600"),
+            },
+            'ol > li::marker': {
+              color: theme("colors.zinc.600"),
+            },
+            code: {
+              color: theme("colors.zinc.200"),
+              backgroundColor: theme("colors.zinc.800"),
+            },
+            pre: {
+              backgroundColor: theme("colors.zinc.900"),
+              color: theme("colors.zinc.200"),
+            },
+            thead: {
+              color: theme("colors.zinc.200"),
+            },
+            'tbody tr': {
+              borderBottomColor: theme("colors.zinc.700"),
             },
           },
         },
@@ -96,31 +116,57 @@ module.exports = {
     require("@tailwindcss/typography"),
     function ({ addBase, theme }) {
       addBase({
-        h1: {
+        'body': {
+          backgroundColor: theme('colors.white'),
+          color: theme('colors.zinc.600'),
+        },
+        'body.dark': {
+          backgroundColor: theme('colors.black'),
+          color: theme('colors.zinc.400'),
+        },
+        'h1': {
           marginTop: "1.25rem",
           marginBottom: "0.5rem",
           fontFamily: theme("fontFamily.silkabold"),
-          color: theme("colors.foreground"),
+          color: theme("colors.zinc.900"),
+          '.dark &': {
+            color: theme("colors.zinc.100"),
+          },
         },
-        h2: {
+        'h2': {
           marginTop: "1.75rem",
           marginBottom: "1rem",
           fontFamily: theme("fontFamily.silkabold"),
-          color: theme("colors.foreground"),
+          color: theme("colors.zinc.900"),
+          '.dark &': {
+            color: theme("colors.zinc.100"),
+          },
         },
-        h3: {
+        'h3': {
           marginTop: "1rem",
           marginBottom: "0.5rem",
           fontFamily: theme("fontFamily.silkabold"),
-          color: theme("colors.foreground"),
+          color: theme("colors.zinc.900"),
+          '.dark &': {
+            color: theme("colors.zinc.100"),
+          },
         },
-        h4: {
+        'h4': {
           marginTop: "1rem",
           marginBottom: "0.5rem",
           fontFamily: theme("fontFamily.silkabold"),
-          color: theme("colors.foreground"),
+          color: theme("colors.zinc.900"),
+          '.dark &': {
+            color: theme("colors.zinc.100"),
+          },
           textTransform: "uppercase",
           letterSpacing: theme("letterSpacing.widest"),
+        },
+        'p': {
+          color: theme("colors.zinc.600"),
+          '.dark &': {
+            color: theme("colors.zinc.400"),
+          },
         },
       });
     },
