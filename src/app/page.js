@@ -26,7 +26,7 @@ export default async function Home() {
             Software designer specialising in improving design maturity.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hi, I'm Tonthowi Al Ahyar, a software designer (UI/UX) with <MonoText>7+</MonoText> years of experience designing digital products and websites for startups, brands, and B2B/Enterprises.
+            Tonthowi Al Ahyar, a software designer (UI/UX) with <MonoText>7+</MonoText> years of experience designing digital products and websites for startups, brands, and B2B/Enterprises.
           </p>
         </div>
       </Container>
