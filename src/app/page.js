@@ -22,44 +22,42 @@ export default async function Home() {
     <>
       <Container className="mt-16 sm:mt-32">
         <div className="max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl font-semibold text-zinc-900 dark:text-zinc-100">
-            Software designer specialising in improving design maturity.
+          <h1 className="text-3xl sm:text-4xl tracking-tight font-semibold text-zinc-900 dark:text-zinc-100">
+            Tonthowi Al Ahyar
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Tonthowi Al Ahyar, a software designer (UI/UX) with <MonoText>7+</MonoText> years of experience designing digital products and websites for startups, brands, and B2B/Enterprises.
+          <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
+            User Interface Designer with <span className='font-semibold'>8+</span> years of experience designing digital products and websites for startups, brands, and B2B/Enterprises.
           </p>
         </div>
       </Container>
       <Container className="mt-24 sm:mt-32">
-        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 mb-8">
-          Featured Works
-        </h2>
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2 xl:gap-x-8">
+        <div className="grid grid-cols-1 gap-y-16 lg:gap-y-20">
           {workCards.map((card) => (
             <article 
               key={card.id} 
-              className="group relative overflow-hidden rounded-md shadow-sm shadow-zinc-100 dark:shadow-none bg-white dark:bg-zinc-950 ring-1 ring-zinc-100 dark:ring-zinc-950 hover:shadow-md hover:dark:shadow-none hover:shadow-zinc-200 transition duration-300"
+              className="group relative grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-8"
             >
-              <div className="w-full overflow-hidden">
+              <div className="relative aspect-[3/3] overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800 lg:aspect-[3/3]">
                 <Image
                   src={card.image}
                   alt={card.title}
                   width={1000}
                   height={1000}
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
-              <div className="flex flex-col p-8 space-y-4 overflow-hidden">
-                <div className="space-y-1">
-                  <h3 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                    <MonoText>{card.year}</MonoText>
-                  </p>
+              <div className="flex flex-col justify-center">
+                <h3 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+                  {card.title}
+                </h3>
+                {/* <p className="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
+                  {card.description}
+                </p> */}
+                <div className="mt-6">
+                  <Button href={`/${card.id}`} variant="secondary">
+                    Case Study →
+                  </Button>
                 </div>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">{card.description}</p>
-                <Button href={`/${card.id}`}>View Case Study →</Button>
               </div>
             </article>
           ))}

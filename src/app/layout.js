@@ -27,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`h-full antialiased ${inter.variable}`} suppressHydrationWarning>
-      <body className="bg-white dark:bg-zinc-950 text-zinc-600 dark:text-zinc-300 min-h-screen">
+      <body className="bg-zinc-50 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-300 min-h-screen">
         <ThemeProvider>
           <div className="flex w-full">
             <Layout>{children}</Layout>

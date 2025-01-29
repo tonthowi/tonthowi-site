@@ -61,6 +61,8 @@ export default async function Page({ params }) {
         deliverables={[frontMatter.deliverables]}
         team={[frontMatter.team]}
         logo={[frontMatter.logo]}
+        year={[frontMatter.year]}
+        link={[frontMatter.link]}
       >
         <MDXContent source={mdxSource} />
       </WorkLayout>

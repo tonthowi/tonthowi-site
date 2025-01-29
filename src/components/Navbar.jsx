@@ -22,10 +22,10 @@ const Navbar = () => {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: 'https://read.cv/tonthowi',target:'_blank', label: 'Read.cv ↗' },
-    { href: 'https://www.linkedin.com/in/tonthowi-al-ahyar/',target:'_blank', label: 'LinkedIn ↗' },
-    { href: 'https://github.com/tonthowi',target:'_blank', label: 'GitHub ↗' },
-    { href: 'https://dribbble.com/tonthowi',target:'_blank', label: 'Dribbble ↗' },
+    { href: 'https://read.cv/tonthowi',target:'_blank', label: 'Read.cv' },
+    { href: 'https://www.linkedin.com/in/tonthowi-al-ahyar/',target:'_blank', label: 'LinkedIn' },
+    { href: 'https://github.com/tonthowi',target:'_blank', label: 'GitHub' },
+    { href: 'https://dribbble.com/tonthowi',target:'_blank', label: 'Dribbble' },
   ]
 
   return (

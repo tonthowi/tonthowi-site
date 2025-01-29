@@ -3,15 +3,15 @@ export const navItems = [
       label: 'About' 
     },
     { href: 'https://read.cv/tonthowi',
-      label: 'Read.CV↗',
-      target: '_blank'
+      label: 'Read.CV',
+      target: '_blank',
     },
     { href: 'https://www.linkedin.com/in/tonthowi-al-ahyar/',
-      label: 'LinkedIn↗',
+      label: 'LinkedIn',
       target: '_blank'
     },
     { href: 'https://github.com/tonthowi',
-      label: 'GitHub↗',
+      label: 'GitHub',
       target: '_blank'
     },
   ];

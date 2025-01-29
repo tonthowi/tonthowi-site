@@ -9,6 +9,7 @@ import {
   LinkedInIcon,
   DribbbleIcon,
 } from '@/components/SocialIcons'
+import { MonoText } from '@/components/MonoText'
 
 function MailIcon(props) {
   return (
@@ -81,16 +82,16 @@ function Role({ role }) {
         </dd>
         <dt className="sr-only">Role</dt>
         <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-          {role.title}
+          <MonoText>{role.title}</MonoText>
         </dd>
         <dt className="sr-only">Date</dt>
         <dd
           className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
           aria-label={`${startLabel} until ${endLabel}`}
         >
-          <time dateTime={startDate}>{startLabel}</time>{' '}
+          <time dateTime={startDate}><MonoText>{startLabel}</MonoText></time>{' '}
           <span aria-hidden="true">—</span>{' '}
-          <time dateTime={endDate}>{endLabel}</time>
+          <time dateTime={endDate}><MonoText>{endLabel}</MonoText></time>
         </dd>
       </dl>
     </li>
@@ -158,21 +159,24 @@ export default function About() {
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Hi, I&apos;m Towi 
+          <h1 className="font-semibold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
+             I&apos;m Towi, User Interface Designer based in Bali.
           </h1>
-          <h3 className="mt-6 tracking-tight text-zinc-400 sm:text-2xl dark:text-zinc-100">
-          A designer based in Bali 🏖️. I&apos;m available for full-time roles, freelance projects and design advicing.
+          <h3 className="mt-6 tracking-tight text-zinc-700 sm:text-2xl dark:text-zinc-100">I&apos;m available for full-time roles, freelance projects and design advicing.
           </h3>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               I started my professional career as a graphic designer, stepping-up as an Art Director in a creative agency.
             </p>
             <p>
-              I was interested in designing and developing websites when I was working on my first company&apos;s website in 2013. I hadn&apos;t any idea what and how to build a website and deployed it live at that time. Google and Stack Overflow was my friend up until now, then we have ChatGPT join the group.
+              I was interested in web development when I was working at my first company in 2013, and I helped to build their website. At that time, I have no idea how to build a website and make it online, Google and Stack Overflow was my friend.
+            </p>
+            
+            <p>
+              I design digital products and websites for startups, brands, and entrepreneurs with cool projects.
             </p>
             <p>
-              Today, I design digital products and websites for startups, brands, and entrepreneurs with cool projects. Also, I&apos;m working for a gaming backend service as a product designer and involved in helping customers launch their games.
+            Currently work with <a href="https://perfeqt.co" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:text-indigo-300 font-semibold">Perfeqt</a> as a Lead Designer for wellness and nutrition app with test taking feature.
             </p>
           </div>
         </div>

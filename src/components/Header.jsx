@@ -115,7 +115,7 @@ function NavItem({ href, label, target }) {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-lg bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <ul className="flex rounded-lg bg-white dark:bg-black px-3 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:text-zinc-200">
         {navItems.map((item, index) => (
           <NavItem
             key={index}
@@ -126,7 +126,7 @@ function DesktopNavigation(props) {
         ))}
       </ul>
     </nav>
-  );
+  )
 }
 
 function clamp(number, a, b) {
@@ -140,7 +140,7 @@ function AvatarContainer({ className, ...props }) {
     <div
       className={clsx(
         className,
-        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
+        'h-10 w-10 rounded-full backdrop-blur p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:ring-white/10',
       )}
       {...props}
     />
@@ -158,10 +158,10 @@ function Avatar({ large = false, className, ...props }) {
       <Image
         src={avatarImage}
         alt="avatar image"
-        sizes={large ? '4rem' : '2.25rem'}
+        sizes={large ? '8rem' : '2.25rem'}
         className={clsx(
-          'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
-          large ? 'h-16 w-16' : 'h-9 w-9',
+          'rounded-full object-cover',
+          large ? 'h-36 w-36' : 'h-9 w-9',
         )}
         priority
       />
@@ -235,7 +235,7 @@ export function Header() {
       }
 
       let fromScale = 1
-      let toScale = 36 / 64
+      let toScale = 36 / 144
       let fromX = 0
       let toX = 2 / 16
 
@@ -313,7 +313,7 @@ export function Header() {
                   />
                   <Avatar
                     large
-                    className="block w-16 h-16 origin-left"
+                    className="block w-36 h-36 origin-left absolute left-0 -top-10"
                     style={{ transform: 'var(--avatar-image-transform)' }}
                   />
                 </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-function ImageWithAlt({ src, alt, title, style, width, height }) {
+function ImageWithAlt({ src, alt, title, style, width, height, className }) {
   const altText = alt || (src ? src.split('/').pop().replace(/\.[^/.]+$/, '').replace(/-/g, ' ') : 'image');
   return (
     <img
@@ -11,6 +11,7 @@ function ImageWithAlt({ src, alt, title, style, width, height }) {
       style={{ width: '100%', maxHeight: '600px', ...style }} // Default styling
       width={width || 800} // Default width
       height={height || 600} // Default height
+      className={className}
     />
   );
 }
