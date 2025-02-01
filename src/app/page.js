@@ -55,7 +55,7 @@ export default async function Home() {
                 </p> */}
                 <div className="mt-6">
                   <Button href={`/${card.id}`} variant="secondary">
-                    Case Study →
+                    View Project →
                   </Button>
                 </div>
               </div>
