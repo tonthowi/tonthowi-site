@@ -23,8 +23,8 @@ module.exports = {
         black: '#000000',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -97,6 +97,26 @@ module.exports = {
             '--tw-prose-hr': theme('colors.zinc.200'),
             '--tw-prose-th-borders': theme('colors.zinc.300'),
             '--tw-prose-td-borders': theme('colors.zinc.200'),
+
+            // Add these lines to customize heading font weights
+            h1: {
+              fontWeight: '600',
+            },
+            h2: {
+              fontWeight: '600',
+            },
+            h3: {
+              fontWeight: '600',
+            },
+            h4: {
+              fontWeight: '600',
+            },
+            h5: {
+              fontWeight: '600',
+            },
+            h6: {
+              fontWeight: '600',
+            },
 
             // Dark mode
             '--tw-prose-invert-body': theme('colors.zinc.300'),

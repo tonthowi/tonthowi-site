@@ -22,14 +22,13 @@ function MailIcon(props) {
   )
 }
 
-
-
 function SocialLinkItem({ link }) {
   return (
     <li className={clsx(link.className, 'flex')}>
       <Link
         href={link.href}
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        aria-label={link.label}
       >
         <link.icon className="h-5 w-5 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
         <span className="ml-4">{link.label}</span>
@@ -160,23 +159,30 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="font-semibold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
-             I&apos;m Towi, User Interface Designer based in Bali.
+             About Me
           </h1>
-          <h3 className="mt-6 tracking-tight text-zinc-700 sm:text-2xl dark:text-zinc-100">I&apos;m available for full-time roles, freelance projects and design advicing.
-          </h3>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I started my professional career as a graphic designer, stepping-up as an Art Director in a creative agency.
+              My name is Tonthowi Al Ahyar. I&apos;m a UI Designer and Software Engineer, living in Bali.
             </p>
             <p>
-              I was interested in web development when I was working at my first company in 2013, and I helped to build their website. At that time, I have no idea how to build a website and make it online, Google and Stack Overflow was my friend.
+              With over 8 years in tech, I have collaborated with big corporate clients, small startups, and micro-businesses, gaining a wide range of insights into digital transformation and business growth.
             </p>
             
             <p>
-              I design digital products and websites for startups, brands, and entrepreneurs with cool projects.
+              Throughout my career, I have been involved in creating web apps, mobile apps, SaaS platforms, websites and e-commerce sites. My focus has always been making these digital products stand out and helping bussinesses sucessfully transition into the digital through design maturity.
             </p>
             <p>
-            Currently work with <a href="https://perfeqt.co" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:text-indigo-300 font-semibold">Perfeqt</a> as a Lead Designer for wellness and nutrition app with test taking feature.
+            Currently work with <a 
+              href="https://perfeqt.co" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-indigo-500 hover:text-indigo-300 font-semibold transition-colors duration-200">
+              Perfeqt
+            </a> as a Lead Designer for wellness and nutrition app with test taking feature.
+            </p>
+            <p>
+            I&apos;m also building a tool called Pensive It!, to help overthinker, hoarder, and creative mind stashes and dumps their findings into a non-opinionated canvas quickly—no judgements.
             </p>
           </div>
         </div>

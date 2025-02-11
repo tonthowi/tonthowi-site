@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom overrides for markdown text content */
+.prose p,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6,
+.prose ul,
+.prose ol {
+  max-width: 40ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

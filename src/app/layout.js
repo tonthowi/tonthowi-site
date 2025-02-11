@@ -1,14 +1,12 @@
 import { Layout } from '@/components/Layout'
-import { Inter } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
 import '@/styles/tailwind.css'
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
+const fontSans = GeistSans
+const fontMono = GeistMono
 
 export const metadata = {
   title: {
@@ -26,7 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`h-full antialiased ${inter.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`h-full antialiased ${fontSans.variable} ${fontMono.variable}`} suppressHydrationWarning>
       <body className="bg-zinc-50 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-300 min-h-screen">
         <ThemeProvider>
           <div className="flex w-full">

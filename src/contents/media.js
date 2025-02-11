@@ -2,9 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 
 function ImageWithAlt({ src, alt, title, style, width, height, className }) {
-  const altText = alt || (src ? src.split('/').pop().replace(/\.[^/.]+$/, '').replace(/-/g, ' ') : 'image');
+  const altText =
+    alt || (src ? src.split('/').pop().replace(/\.[^/.]+$/, '').replace(/-/g, ' ') : 'image');
   return (
-    <img
+    <Image
       src={src}
       alt={altText}
       title={title}
@@ -12,6 +13,7 @@ function ImageWithAlt({ src, alt, title, style, width, height, className }) {
       width={width || 800} // Default width
       height={height || 600} // Default height
       className={className}
+      loading="lazy" // Lazy load non-critical images
     />
   );
 }
@@ -25,6 +27,7 @@ function VideoWithAlt({ src, className, style }) {
       loop
       muted
       playsInline
+      preload="none" // Do not preload video to save bandwidth
       className={className}
       style={{ width: '100%', maxHeight: '600px', ...style }}
     >
