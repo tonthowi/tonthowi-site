@@ -13,7 +13,7 @@ import {
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import avatarImage from '../../public/images/self-portrait.png'
+import avatarImage from '../../public/images/selfpic.JPG'
 
 import { navItems } from './navItems';
 import { ThemeToggle } from './ThemeToggle'

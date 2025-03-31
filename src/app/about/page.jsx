@@ -149,11 +149,11 @@ export default function About() {
         <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
-              src="/images/about-photo.png"
+              src="/images/selfpic.JPG"
               width={550}
               height={550}
               alt="About Tonthowi Al Ahyar"
-              className="aspect-square rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              className="aspect-square rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
             />
           </div>
         </div>
@@ -163,7 +163,7 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              My name is Tonthowi Al Ahyar. I&apos;m a UI Designer and Software Engineer, living in Bali.
+              My name is Tonthowi Al Ahyar. I&apos;m a UI Designer and Software Engineer, living in Bali, Indonesia.
             </p>
             <p>
               With over 8 years in tech, I have collaborated with big corporate clients, small startups, and micro-businesses, gaining a wide range of insights into digital transformation and business growth.
